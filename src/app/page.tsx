@@ -1,170 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Home() {
-  const [productsOpen, setProductsOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <Image
-                src="https://www.clopos.com/favicon.ico"
-                alt="Clopos Logo"
-                width={32}
-                height={32}
-                className="mr-2"
-              />
-              <h1 className="text-2xl font-bold text-gray-900">Clopos</h1>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              {/* Ürünler - Mega menu */}
-              <div className="relative" onMouseEnter={() => setProductsOpen(true)} onMouseLeave={() => setProductsOpen(false)}>
-                <button aria-expanded={productsOpen} className="text-gray-500 hover:text-gray-900 focus:outline-none">Ürünler</button>
-                <div className={`absolute left-0 mt-3 w-[680px] bg-white rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 p-6 z-50 transition-all duration-200 transform ${productsOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-2'}`}>
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <div className="p-2 bg-blue-50 rounded-md">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h18M3 12h18M3 17h18" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-semibold text-gray-900">POS Adisyon sistemi</div>
-                          <div className="text-sm text-gray-500">Modern bir POS sistemi ile satış sürecinizi hızlandırın</div>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start space-x-3">
-                        <div className="p-2 bg-blue-50 rounded-md">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h4l3 8 4-16 3 8h4" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-semibold text-gray-900">Restoran Otomasyon Sistemi</div>
-                          <div className="text-sm text-gray-500">İşle ilgili tüm operasyonları tek bir yazılımdan yönetin</div>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start space-x-3">
-                        <div className="p-2 bg-blue-50 rounded-md">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-semibold text-gray-900">Clopos Manager uygulaması</div>
-                          <div className="text-sm text-gray-500">Uzakta olsanız bile iş operasyonlarınızı izleyin</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <div className="p-2 bg-blue-50 rounded-md">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V7a2 2 0 00-2-2h-6" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-semibold text-gray-900">Mutfak Ekranı Sistemi</div>
-                          <div className="text-sm text-gray-500">İş akışını geliştirmek için mutfaktaki operasyonları dijitalleştirin</div>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start space-x-3">
-                        <div className="p-2 bg-blue-50 rounded-md">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h18M3 12h18M3 17h18" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-semibold text-gray-900">QR Menü</div>
-                          <div className="text-sm text-gray-500">Müşterilerin menünüzü hemen açıp sipariş vermesine izin verin</div>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start space-x-3">
-                        <div className="p-2 bg-blue-50 rounded-md">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h18M3 12h18M3 17h18" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-semibold text-gray-900">Merkezi Zincir Yönetimi</div>
-                          <div className="text-sm text-gray-500">Tüm şubeleri tek bir şubeymiş gibi kolayca yönetin</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-5 border-t pt-4">
-                    <a href="#" className="inline-flex items-center text-blue-600 font-medium hover:underline">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M3 3v14h14V3H3zm2 4h10v2H5V7z" />
-                      </svg>
-                      Yazılımları indirin
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Fonksiyonlar - küçük hover list */}
-              <div className="relative group">
-                <button className="text-gray-500 hover:text-gray-900 focus:outline-none">Fonksiyonlar</button>
-                <div className="pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150 transform -translate-y-2 group-hover:translate-y-0 absolute left-0 mt-3 w-56 bg-white rounded-md shadow-md ring-1 ring-black ring-opacity-5 p-3 z-50">
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li><a href="#" className="block hover:text-gray-900">POS Adisyon</a></li>
-                    <li><a href="#" className="block hover:text-gray-900">Mutfak Ekranı</a></li>
-                    <li><a href="#" className="block hover:text-gray-900">QR Menü</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <a href="/pricing" className="text-gray-500 hover:text-gray-900">Fiyatlar</a>
-
-              <div className="relative group">
-                <button className="text-gray-500 hover:text-gray-900 focus:outline-none">Yardım Merkezi</button>
-                <div className="pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150 transform -translate-y-2 group-hover:translate-y-0 absolute left-0 mt-3 w-64 bg-white rounded-md shadow-md ring-1 ring-black ring-opacity-5 p-3 z-50">
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li><a href="#" className="block hover:text-gray-900">SSS</a></li>
-                    <li><a href="#" className="block hover:text-gray-900">Dokümantasyon</a></li>
-                    <li><a href="#" className="block hover:text-gray-900">İletişim</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="relative group">
-                <button className="text-gray-500 hover:text-gray-900 focus:outline-none">Şirket</button>
-                <div className="pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150 transform -translate-y-2 group-hover:translate-y-0 absolute left-0 mt-3 w-56 bg-white rounded-md shadow-md ring-1 ring-black ring-opacity-5 p-3 z-50">
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li><a href="#" className="block hover:text-gray-900">Hakkımızda</a></li>
-                    <li><a href="#" className="block hover:text-gray-900">Kariyer</a></li>
-                    <li><a href="#" className="block hover:text-gray-900">Ortaklık</a></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-gray-600">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2v20" />
-                </svg>
-                <span className="hidden sm:inline">TR</span>
-              </div>
-              <a href="tel:05325955266" className="bg-blue-600 text-white px-5 py-2 rounded-full shadow-md font-medium">0532 595 52 66</a>
-              <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-full bg-white">Login</button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section id="home" className="bg-gradient-to-r from-blue-50 to-indigo-100 py-20">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -329,18 +169,20 @@ export default function Home() {
       {/* İşlere kolaylık uygulayın */}
       <section className="bg-white py-16">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-3xl font-extrabold text-gray-900">İşlere kolaylık uygulayın!</h3>
-            <p className="mt-4 text-xl text-gray-500">
-              Clopos Manager Uygulaması ile nerede olursanız olun, işlere kaldığınız yerden devam ede ve işinizi kolaylıkla yönete bilirsiniz
-            </p>
-            <div className="mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="text-left">
+              <h3 className="text-3xl font-extrabold text-gray-900">İşlere kolaylık uygulayın!</h3>
+              <p className="mt-4 text-xl text-gray-500">
+                Clopos Manager Uygulaması ile nerede olursanız olun, işlere kaldığınız yerden devam ede ve işinizi kolaylıkla yönete bilirsiniz
+              </p>
+            </div>
+            <div className="flex justify-center lg:justify-end mt-6 lg:mt-0">
               <Image
                 src="https://www.clopos.com/_next/static/media/clopos-manager-app.6824bfdd.webp"
                 alt="Clopos Manager App"
                 width={600}
                 height={400}
-                className="mx-auto rounded-lg"
+                className="rounded-lg"
               />
             </div>
           </div>
