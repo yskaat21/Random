@@ -41,7 +41,7 @@ export default function Header() {
           </Link>
           <nav className="hidden md:flex space-x-8">
             <div className="relative" onMouseEnter={() => setOpenMenu('urunler')} onMouseLeave={() => setOpenMenu(null)}>
-              <button aria-expanded={openMenu === 'urunler'} onClick={() => setOpenMenu(openMenu === 'urunler' ? null : 'urunler')} className="text-gray-500 hover:text-gray-900 focus:outline-none">Ürünler</button>
+              <button aria-expanded={openMenu === 'urunler'} onClick={() => setOpenMenu(openMenu === 'urunler' ? null : 'urunler')} className="text-gray-500 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md transition duration-200 focus:outline-none">Ürünler</button>
               <div className={`absolute left-0 mt-3 w-[680px] bg-white rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 p-6 z-50 transition-all duration-200 transform pointer-events-none opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 ${openMenu === 'urunler' ? 'opacity-100 pointer-events-auto translate-y-0' : ''}`}>
                 {/* simplified content omitted for brevity */}
                 <div className="grid grid-cols-2 gap-6">
@@ -83,7 +83,7 @@ export default function Header() {
             </div>
 
             <div className="relative group" onMouseEnter={() => setOpenMenu('fonksiyonlar')} onMouseLeave={() => setOpenMenu(null)}>
-              <button onClick={() => setOpenMenu(openMenu === 'fonksiyonlar' ? null : 'fonksiyonlar')} className="text-gray-500 hover:text-gray-900 focus:outline-none">Fonksiyonlar</button>
+              <button onClick={() => setOpenMenu(openMenu === 'fonksiyonlar' ? null : 'fonksiyonlar')} className="text-gray-500 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md transition duration-200 focus:outline-none">Fonksiyonlar</button>
               <div className={`absolute left-0 mt-3 w-[520px] bg-white rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 p-6 z-50 pointer-events-none opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-200 transform ${openMenu === 'fonksiyonlar' ? 'opacity-100 pointer-events-auto translate-y-0' : ''}`}>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-4">
@@ -142,34 +142,11 @@ export default function Header() {
             </div>
 
             <div className="relative group">
-              <a href="/pricing" className="text-gray-500 hover:text-gray-900 focus:outline-none">Fiyatlar</a>
-              <div className="absolute left-0 mt-3 w-[420px] bg-white rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 p-6 z-50 pointer-events-none opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-200 transform">
-                <div className="space-y-4">
-                  <div className="font-semibold text-gray-900">💳 Esnek ödeme planları</div>
-                  <div className="text-sm text-gray-500">İhtiyacınıza uygun Başlangıç, Standart ve Kurumsal paketleri keşfedin.</div>
-                </div>
-                <div className="mt-4 grid grid-cols-3 gap-3">
-                  <div className="p-3 bg-gray-50 rounded-md text-center">
-                    <div className="font-semibold">🔰 Başlangıç</div>
-                    <div className="text-sm text-gray-600">Uygun fiyat</div>
-                  </div>
-                  <div className="p-3 bg-gray-50 rounded-md text-center border-2 border-blue-100">
-                    <div className="font-semibold">⭐ Standart</div>
-                    <div className="text-sm text-gray-600">En çok tercih edilen</div>
-                  </div>
-                  <div className="p-3 bg-gray-50 rounded-md text-center">
-                    <div className="font-semibold">🏢 Kurumsal</div>
-                    <div className="text-sm text-gray-600">Ölçeklenebilir</div>
-                  </div>
-                </div>
-                <div className="mt-5 border-t pt-4">
-                  <a href="/pricing" className="inline-flex items-center text-blue-600 font-medium hover:underline">Fiyatlandırmayı Gör</a>
-                </div>
-              </div>
+              <a href="/pricing" className="text-gray-500 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md transition duration-200 focus:outline-none inline-block">Fiyatlar</a>
             </div>
 
             <div className="relative group" onMouseEnter={() => setOpenMenu('yardim')} onMouseLeave={() => setOpenMenu(null)}>
-              <button onClick={() => setOpenMenu(openMenu === 'yardim' ? null : 'yardim')} className="text-gray-500 hover:text-gray-900 focus:outline-none">Yardım Merkezi</button>
+              <button onClick={() => setOpenMenu(openMenu === 'yardim' ? null : 'yardim')} className="text-gray-500 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md transition duration-200 focus:outline-none">Yardım Merkezi</button>
               <div className={`absolute left-0 mt-3 w-[420px] bg-white rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 p-6 z-50 pointer-events-none opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-200 transform ${openMenu === 'yardim' ? 'opacity-100 pointer-events-auto translate-y-0' : ''}`}>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
@@ -188,7 +165,7 @@ export default function Header() {
             </div>
 
             <div className="relative group" onMouseEnter={() => setOpenMenu('sirket')} onMouseLeave={() => setOpenMenu(null)}>
-              <button onClick={() => setOpenMenu(openMenu === 'sirket' ? null : 'sirket')} className="text-gray-500 hover:text-gray-900 focus:outline-none">Şirket</button>
+              <button onClick={() => setOpenMenu(openMenu === 'sirket' ? null : 'sirket')} className="text-gray-500 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md transition duration-200 focus:outline-none">Şirket</button>
               <div className={`absolute left-0 mt-3 w-[420px] bg-white rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 p-6 z-50 pointer-events-none opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-200 transform ${openMenu === 'sirket' ? 'opacity-100 pointer-events-auto translate-y-0' : ''}`}>
                 <div className="space-y-3">
                   <div className="font-semibold text-gray-900">🏢 Hakkımızda</div>
